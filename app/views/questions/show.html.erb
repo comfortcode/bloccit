@@ -1,0 +1,9 @@
+<h1><%= @q.title %></h1>
+<%= link_to "Edit", edit_question_path(@q), class: 'btn btn-success' %>
+<%= link_to "Delete", "#", class: 'btn btn-danger' %>
+<p><%= @q.body %></p>
+<% if @q.resolved == false %>
+<p> Unresolved </p>
+<% else %>
+  <p>Resolved</p>
+<% end %>
