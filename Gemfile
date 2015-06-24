@@ -1,16 +1,9 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sass-rails', '~> 5.0'
-
-#Bootstrap
-gem 'bootstrap-sass'
-
-#Faker-Seed Data
-gem 'faker'
 
  group :production do
    gem 'pg'
@@ -20,6 +13,16 @@ gem 'faker'
  group :development do
    gem 'sqlite3'
  end
+
+#Devies
+gem 'devise'
+
+#Bootstrap
+gem 'bootstrap-sass'
+
+#Faker-Seed Data
+gem 'faker'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
