@@ -14,6 +14,8 @@ gem 'sass-rails', '~> 5.0'
    gem 'sqlite3'
  end
 
+gem 'figaro', '1.0'
+
 #Devies
 gem 'devise'
 
