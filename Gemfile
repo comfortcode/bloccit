@@ -16,9 +16,11 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'figaro', '1.0'
 
-#Devies
+#Devise
 gem 'devise'
 
+#Pundit
+gem 'pundit'
 #Bootstrap
 gem 'bootstrap-sass'
 
