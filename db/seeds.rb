@@ -1,5 +1,4 @@
  require 'faker'
- 
 
  # Create Users
  5.times do
@@ -27,7 +26,7 @@
    Post.create!(
      user:   users.sample,
      title:  Faker::Lorem.sentence,
-     body:   Faker::Lorem.paragraph
+     body:   Faker::Lorem.paragraph,
    )
  end
  posts = Post.all
@@ -45,7 +44,8 @@
  user.skip_reconfirmation!
  user.update_attributes!(
    email: 'nechama@test.com',
-   password: 'nechamag'
+   password: 'nechamag',
+   #   role: 'admin' this didn't work- why not?
  )
 
  puts "Seed finished"
