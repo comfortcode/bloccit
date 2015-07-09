@@ -21,11 +21,20 @@
  
  # The `save` method then saves this User to the database.
 
+ # Create Topics
+ 15.times do
+   Topic.create!(
+     name:         Faker::Lorem.sentence,
+     description:  Faker::Lorem.paragraph
+   )
+ end
+ topics = Topic.all
 
  # Create Posts
  50.times do
    Post.create!(
      user:   users.sample,
+     topic:  topics.sample,
      title:  Faker::Lorem.sentence,
      body:   Faker::Lorem.paragraph
    )
@@ -44,8 +53,17 @@
  user = User.first
  user.skip_reconfirmation!
  user.update_attributes!(
+   email: 'admin@example.com',
+   password: 'helloworld',
+   role: 'admin'
+ )
+
+user = User.second
+ user.skip_reconfirmation!
+ user.update_attributes!(
    email: 'nechama@test.com',
-   password: 'nechamag'
+   password: 'nechamag',
+   role: 'member'
  )
 
  puts "Seed finished"
