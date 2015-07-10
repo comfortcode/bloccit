@@ -1,0 +1,4 @@
+<h1>Index of Summaries</h1>
+<% @sums.each do |sum| %>
+<p><%= link_to "Summary of #{sum.post.title}", sum %></p>
+<% end %>

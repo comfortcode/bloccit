@@ -50,6 +50,14 @@
    )
  end
 
+# Create Summaries
+ 10.times do
+   Summary.create!(
+     post: posts.sample,
+     body: Faker::Lorem.paragraph
+   )
+ end
+
  user = User.first
  user.skip_reconfirmation!
  user.update_attributes!(

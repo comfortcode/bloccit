@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  
+#   get 'summaries/index'
+#   get 'summaries/show'
+#   get 'summaries/new'
+  # could I have used resources if I don't use edit?
+  
   devise_for :users
 
    resources :topics do
-     resources :posts, except: [:index]
+     resources :posts, except: [:index] do 
+       resources :summaries, :except => [:edit]
+     end
    end
   
   get 'about' => 'welcome#about'
