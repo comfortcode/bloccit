@@ -1,5 +1,4 @@
  require 'faker'
- 
 
  # Create Users
  5.times do
@@ -22,7 +21,7 @@
  # The `save` method then saves this User to the database.
 
  # Create Topics
- 15.times do
+ 150.times do
    Topic.create!(
      name:         Faker::Lorem.sentence,
      description:  Faker::Lorem.paragraph
@@ -31,7 +30,7 @@
  topics = Topic.all
 
  # Create Posts
- 50.times do
+ 2000.times do
    Post.create!(
      user:   users.sample,
      topic:  topics.sample,
