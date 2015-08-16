@@ -11,6 +11,18 @@
     <% if @post.image? %>
        <%= image_tag( @post.image.profile.url ) %>
    <% end %>
+
+    <% if @comments != nil %> <!--  simpler way to write this?    -->
+    </br> <!--   how can I add more spacing? -->
+    <h1> Comments </h1>
+    <% @comments.each do |comment| %>
+<!--         <%= render partial: 'comments/comment', locals: { comment: comment} %> -->
+        <%= render comment %>
+     <% end %>
+   <% end %>
+  <% if user_signed_in? %>
+    <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
+  <% end %>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
