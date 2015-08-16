@@ -20,7 +20,7 @@
         <%= render comment %>
      <% end %>
    <% end %>
-  <% if user_signed_in? %>
+  <% if policy(Comment.new).create? %>
     <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
   <% end %>
   </div>
