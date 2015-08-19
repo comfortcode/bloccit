@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
      @topic = Topic.find(params[:topic_id]) #needed?
      @post = Post.find(params[:post_id])
      @comment = Comment.new
+     authorize @comment
    end
   
    def create
@@ -27,6 +28,7 @@ class CommentsController < ApplicationController
      @post = Post.find(params[:post_id])
      @comment = current_user.comments.build(params.require(:comment).permit(:body))
      @comment.post = @post
+     authorize @comment
 
      if @comment.save
        flash[:notice] = "Comment was saved."
