@@ -1,5 +1,5 @@
 <h3> Add A Comment </h3>
-<%= form_for [topic, post, post.comments.new] do |f| %> 
+<%= form_for [post, post.comments.new] do |f| %> 
      <%= f.label :body %>
       <%= f.text_field :body %>
       <%= f.submit "Save", class: 'btn btn-success' %>
