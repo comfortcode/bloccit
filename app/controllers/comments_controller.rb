@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
      else
        flash[:error] = "There was an error deleting the comment."
      end
-     redirect_to [@topic, @post] #okay to have it here?
+     redirect_to [@topic, @post]
    end  
   
   
