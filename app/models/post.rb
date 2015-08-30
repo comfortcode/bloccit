@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :topic
   mount_uploader :image, ImageUploader
+  after_create :create_vote
  
    default_scope { order('rank DESC') }
 
@@ -12,7 +13,11 @@ class Post < ActiveRecord::Base
 #    validates :topic, presence: true
 #    validates :user, presence: true
 
-   def up_votes
+  def create_vote
+    user.votes.create(value:1, post_id: id)
+  end
+  
+  def up_votes
      votes.where(value: 1).count
    end 
 
