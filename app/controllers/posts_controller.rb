@@ -20,6 +20,7 @@
      @post = Post.find(params[:id])
      @comments = @post.comments
      authorize @post
+     authorize @topic     
    end
 
    def new
