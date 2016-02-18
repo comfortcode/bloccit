@@ -15,7 +15,7 @@
     <% if @comments != nil %> <!--  simpler way to write this?    -->
     </br> <!--   how can I add more spacing? -->
     <h1> Comments </h1>
-        <%= render @comments %>
+        <%= render partial: 'comments/comment', collection: @comments %>
    <% end %>
   <% if policy(Comment.new).create? %>
     <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
