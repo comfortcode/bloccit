@@ -5,5 +5,18 @@ FactoryGirl.define do
      password "helloworld"
      password_confirmation "helloworld"
      confirmed_at Time.now
-  end 
+  
+    factory :user_with_post_and_comment do
+
+      after(:create) do |user, evaluator|
+        create_post(user: [user])
+        create_comment(user: [user])
+      end    
+     
+  end
+
+  
+Because of the direction of associations, comments and posts have user IDs, not the other way around. Therefore, use an after(:build).  
+
+  
 end 
