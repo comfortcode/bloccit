@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
 
    def destroy
-     @topic = Topic.find(params[:topic_id])
      @post = Post.find(params[:post_id])
      @comment = Comment.find(params[:id])
  
@@ -13,16 +12,10 @@ class CommentsController < ApplicationController
        flash[:error] = "There was an error deleting the comment."
      end
      
-     respond_to do |format|
-       format.html
-       format.js
-     end
-     
    end  
   
   
   def new
-     @topic = Topic.find(params[:topic_id]) #needed?
      @post = Post.find(params[:post_id])
      @comment = Comment.new
      authorize @comment
