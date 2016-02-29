@@ -11,16 +11,17 @@ class CommentsController < ApplicationController
      else
        flash[:error] = "There was an error deleting the comment."
      end
-     redirect_to [@post.topic, @post]
-   end  
-  
-  
+
+     respond_to do |format|
+       format.html
+       format.js
+     end
+
   def new
-     @topic = Topic.find(params[:topic_id]) #needed?
      @post = Post.find(params[:post_id])
      @comment = Comment.new
      authorize @comment
-   end
+  end
   
    def create
      @post = Post.find(params[:post_id])
