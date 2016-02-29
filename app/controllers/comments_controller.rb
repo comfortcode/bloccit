@@ -12,6 +12,11 @@ class CommentsController < ApplicationController
        flash[:error] = "There was an error deleting the comment."
      end
      
+     respond_to do |format|
+       format.html
+       format.js
+     end
+     
    end  
   
   
@@ -19,7 +24,7 @@ class CommentsController < ApplicationController
      @post = Post.find(params[:post_id])
      @comment = Comment.new
      authorize @comment
-   end
+  end
   
    def create
      @post = Post.find(params[:post_id])
