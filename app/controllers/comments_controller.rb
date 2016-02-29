@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
 
    def destroy
-     @topic = Topic.find(params[:topic_id])
      @post = Post.find(params[:post_id])
      @comment = Comment.find(params[:id])
  
@@ -12,7 +11,7 @@ class CommentsController < ApplicationController
      else
        flash[:error] = "There was an error deleting the comment."
      end
-     redirect_to [@topic, @post]
+     redirect_to [@post.topic, @post]
    end  
   
   

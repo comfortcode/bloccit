@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150902024607) do
 
-  create_table "ads", force: :cascade do |t|
-    t.string   "title"
-    t.text     "copy"
-    t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "comments", force: :cascade do |t|
     t.text     "body"
     t.integer  "post_id"
@@ -55,23 +47,6 @@ ActiveRecord::Schema.define(version: 20150902024607) do
 
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
-
-  create_table "questions", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.boolean  "resolved"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "summaries", force: :cascade do |t|
-    t.text     "body"
-    t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "summaries", ["post_id"], name: "index_summaries_on_post_id"
 
   create_table "topics", force: :cascade do |t|
     t.string   "name"
