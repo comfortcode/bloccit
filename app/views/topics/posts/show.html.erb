@@ -15,10 +15,14 @@
     <% if @comments != nil %> <!--  simpler way to write this?    -->
     </br> <!--   how can I add more spacing? -->
     <h1> Comments </h1>
+     <div class='js-comments'>
         <%= render partial: 'comments/comment', collection: @comments %>
+     </div>
    <% end %>
   <% if policy(Comment.new).create? %>
-    <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
+   <div class="new-comment">
+   <%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
+   </div>
   <% end %>
   </div>
   <div class="col-md-4">
