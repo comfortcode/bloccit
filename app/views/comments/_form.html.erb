@@ -1,5 +1,6 @@
 <h3> Add A Comment </h3>
-<%= form_for [post, post.comments.new] do |f| %> 
+<%#= form_for [post, post.comments.new], remote: true  do |f| %> 
+<%= form_for [@post, Comment.new], remote: true do |f| %>
      <%= f.label :body %>
       <%= f.text_field :body %>
       <%= f.submit "Save", class: 'btn btn-success' %>
