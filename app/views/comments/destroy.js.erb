@@ -1,6 +1,8 @@
  <% if @comment.destroyed? %>
    $('#comment-' +<%= @comment.id %>).hide();
    $('.js-comments-count').html("<%= pluralize(@comment.user.comments.count, 'comment') %>");
+   $('.flash').html("<%= escape_javascript(render partial: 'layouts/flash_messages', locals: { notice: "The comment was deleted successfully." }) %>");   
  <% else %>
    $('#comment-' +<%= @comment.id %>).prepend("<div class='alert alert-danger'><%= flash[:error] %></div>");
+   $('.flash').html("<%= escape_javascript(render partial: 'layouts/flash_messages', locals: { notice: "The comment was not deleted. Please try again" }) %>");   
  <% end %>

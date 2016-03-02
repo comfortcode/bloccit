@@ -6,11 +6,7 @@ class CommentsController < ApplicationController
  
      authorize @comment
      
-     if @comment.destroy
-       flash[:notice] = "The comment was deleted successfully."
-     else
-       flash[:error] = "There was an error deleting the comment."
-     end
+     @comment.destroy
      
      respond_to do |format|
        format.html
@@ -37,14 +33,10 @@ class CommentsController < ApplicationController
 
     authorize @comment
 
-    if @comment.save
-      flash[:notice] = "Comment was created."
-    else
-      flash[:error] = "There was an error saving the comment. Please try again."
-    end
-
+    @comment.save
+    
     respond_to do |format|
-      format.html
+      format.html {redirect_to [@post.topic, @post]}
       format.js
     end
  end
