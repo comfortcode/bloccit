@@ -57,6 +57,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
  gem 'mini_magick'
  gem 'fog'
  gem 'will_paginate', '~> 3.0.5'
+ gem 'ransack'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

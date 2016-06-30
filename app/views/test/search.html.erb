@@ -1,0 +1,28 @@
+<%= search_form_for @search do |f| %>
+    <div class ="field">
+        <%= f.label :title_cont, "Title contains" %>
+        <%= f.text_field :title_cont %>
+    </div>
+    <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
+<table id="posts">
+  <tr>
+    <th><%= sort_link @search, :title, "Post Title" %></th>
+    <th><%= sort_link @search, :body, "Body" %></th>
+    <th><%= sort_link @search, :user, "Created By" %></th>
+    <th><%= sort_link @search, :image, "Image?" %></th>
+    <th><%= sort_link @search, :upvotes, "Upvotes" %></th>
+    <th><%= sort_link @search, :upvotes, "Downvotes" %></th>
+  </tr>
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= link_to(post.title, topic_post_path(post.topic, post)) %></td>
+    <td><%= post.body %></td>
+    <td><%= link_to(post.user.name, user_path(post.user))%></td>    
+    <td><%= "Yes" if post.image? %></td>
+    <td><%= post.up_votes%></td>
+    <td><%= post.down_votes%></td>
+  </tr>
+<% end %>
+</table>
