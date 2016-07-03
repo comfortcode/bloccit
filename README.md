@@ -1,5 +1,6 @@
 ## Bloccit
 Robust Reddit Replica
+
 Live here: [bloccitnb-app.herokuapp.com](https://bloccitnb-app.herokuapp.com/)
 
 Demo: User: user@example.com, Password: helloworld
@@ -10,7 +11,7 @@ Demo: User: user@example.com, Password: helloworld
 *   Front-end Design using Bootstrap
 *   User Authorization
 *   Generates fake data for testing
-*   Allow users to Style with Markdown
+*   Allows users to Style with Markdown
 *   Image Storage
 *   File Uploading
 *   Editing and Converting Images
