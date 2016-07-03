@@ -1,5 +1,21 @@
-# Bloccit: a Reddit replica to teach the fundamentals of web development and Rails.
+## Bloccit
+Robust Reddit Replica
+Live here: [bloccitnb-app.herokuapp.com](https://bloccitnb-app.herokuapp.com/)
 
-Made with my mentor at [Bloc](http://bloc.io).
+Demo: User: user@example.com, Password: helloworld
 
-App URL: https://nechama-bloccit.herokuapp.com
+## Some Development Features...
+User Authentication
+Secure App Configuration
+Front-end Design using Bootstrap
+User Authorization
+Generates fake data for testing
+Allow users to Style with Markdown
+Image Storage
+File Uploading
+Editing and Converting Images
+Pagination
+RSpec 
+Test Factories
+Simulates User Interaction for Testing
+
