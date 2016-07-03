@@ -10,13 +10,12 @@ Demo: User: user@example.com, Password: helloworld
 *   Secure App Configuration
 *   Front-end Design using Bootstrap
 *   User Authorization
-*   Generates fake data for testing
-*   Allows users to Style with Markdown
+*   Generates Fake Data for testing
+*   Allows Users to Style with Markdown
 *   Image Storage
 *   File Uploading
 *   Editing and Converting Images
 *   Pagination
-*   RSpec 
+*   RSpec Testing
 *   Test Factories
 *   Simulates User Interaction for Testing
-
