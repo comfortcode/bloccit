@@ -1,7 +1,7 @@
-# Bloccit
-Robust Reddit Replica
+# Feddit
+Family-oriented Reddit Replica
 
-Live here: [bloccitnb-app.herokuapp.com](https://bloccitnb-app.herokuapp.com/)
+Live [here](https://bloccitnb-app.herokuapp.com/)
 
 Demo: User: user@example.com, Password: helloworld
 
