@@ -1,7 +1,7 @@
 # Feddit
 Family-oriented Reddit Replica
 
-Live [here](https://bloccitnb-app.herokuapp.com/)
+Live here: [feddit-nb.herokuapp.com](https://feddit-nb.herokuapp.com/)
 
 Demo: User: user@example.com, Password: helloworld
 
