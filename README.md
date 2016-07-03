@@ -1,4 +1,4 @@
-## Bloccit
+# Bloccit
 Robust Reddit Replica
 
 Live here: [bloccitnb-app.herokuapp.com](https://bloccitnb-app.herokuapp.com/)
